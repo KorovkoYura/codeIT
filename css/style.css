@@ -1,0 +1,641 @@
+.container-fluid {
+  padding: 0;
+}
+/* Feedback */
+.fade {
+  opacity: 0;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 320%;
+  background-color: black;
+  z-index: 999;
+}
+.feedback {
+  opacity: 0;
+  display: none;
+  position: absolute;
+  top: 30%;
+  left: 35%;
+  right: 35%;
+  max-width: 466px;
+  width: 30%;
+  min-height: 520px;
+  z-index: 1000;
+  margin: 0 auto;
+  background-color: #ffffff;
+}
+.feedback .closeBtn {
+  width: 27px;
+  height: 27px;
+  display: block;
+  position: absolute;
+  right: -27px;
+  top: -27px;
+  background-color: #fff;
+}
+.feedback .closeBtn:after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  left: 5px;
+  top: 5px;
+  background-image: url(../img/close.png);
+}
+.feedback .title {
+  text-align: center;
+  color: #a39f91;
+  font-family: 'Arimo', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  margin-top: 35px;
+}
+.feedback .field {
+  margin-left: 10%;
+  max-width: 340px;
+  width: 80%;
+}
+.feedback .field label {
+  width: 50%;
+  margin: 10px 0 0 0;
+  color: #a19a88;
+}
+.feedback .field label span {
+  color: #ca7473;
+}
+.feedback .field .error {
+  border-color: #f1b7b6;
+  color: #f1b7b6;
+  box-shadow: inset 0px 0px 15px 5px rgba(154, 156, 161, 0.2);
+}
+.feedback .field .success {
+  border-color: green;
+  box-shadow: none;
+}
+.feedback .field input {
+  max-width: 340px;
+  width: 100%;
+  border: 1px solid #d9d4c6;
+  padding: 7px 0;
+  font-family: 'Arimo', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+.feedback .field textarea {
+  max-width: 340px;
+  width: 100%;
+  min-height: 120px;
+  resize: none;
+  border: 1px solid #d9d4c6;
+}
+.feedback .field input[type=submit] {
+  max-width: 100px;
+  width: 30%;
+  background-color: #1f222a;
+  color: #fff;
+  padding: 8px 10px;
+  margin-top: 15px;
+  margin-left: 70%;
+}
+/* Header*/
+.top {
+  max-width: 980px;
+  min-height: 90px;
+  width: 100%;
+  padding: 25px 10px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+.top .logo {
+  width: 30%;
+  float: left;
+}
+.top a {
+  display: block;
+}
+.top .tel {
+  margin-left: 37%;
+  width: 20%;
+  float: left;
+  color: #5a5a5a;
+  font-size: 1.28em;
+}
+.top button {
+  max-width: 120px;
+  display: block;
+  width: 20%;
+  background-color: #282c37;
+  border: none;
+  border-radius: 0;
+  color: #fff;
+  padding: 7px 15px;
+}
+.top:after {
+  content: "";
+  clear: both;
+}
+.menu {
+  background-color: #282c37;
+  width: 100%;
+  height: 75px;
+  line-height: 75px;
+}
+.menu ul {
+  max-width: 980px;
+  padding: 0 10px;
+  padding: 0;
+  margin: 0 auto;
+  text-align: center;
+}
+.menu ul li {
+  display: inline-block;
+  list-style: none;
+  margin-right: 50px;
+  position: relative;
+}
+.menu ul li a {
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+}
+.menu ul li a:hover {
+  text-decoration: underline;
+}
+.menu ul li a:after {
+  content: " ";
+  margin-left: 50px;
+  border: 1px solid #424757;
+}
+.menu ul li:last-child a:after {
+  content: "";
+  border: none;
+}
+/* Slider */
+.viewport {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  height: 537px;
+  overflow: hidden;
+  position: relative;
+}
+.viewport .slidewrapper {
+  position: absolute;
+  height: 537px;
+  left: 0;
+  top: 0;
+  margin: 0;
+  padding: 0;
+}
+.viewport .slidewrapper .slide {
+  width: 1400px;
+  height: 537px;
+  float: left;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.viewport .slidewrapper .slide img {
+  max-width: 100%;
+  height: auto;
+}
+.viewport .slidewrapper:after {
+  content: "";
+  clear: both;
+}
+.viewport .tog {
+  position: absolute;
+  width: 10%;
+  height: 30px;
+  bottom: 5%;
+  left: 45%;
+}
+.viewport .tog .dot {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  z-index: 99999;
+  background-color: #767676;
+}
+.viewport .tog .active {
+  background-color: #282c37;
+}
+/* Content */
+#content {
+  max-width: 980px;
+  margin: 40px auto;
+  padding: 0 10px;
+  width: 100%;
+}
+#content .breadcrumbs ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#content .breadcrumbs ul li {
+  display: inline-block;
+  padding-right: 30px;
+  position: relative;
+}
+#content .breadcrumbs ul li a {
+  color: #282c37;
+  font-size: 14px;
+  font-family: 'Arimo', sans-serif;
+  text-decoration: none;
+}
+#content .breadcrumbs ul li:last-child a {
+  color: #767676;
+  pointer-events: none;
+}
+#content .breadcrumbs ul li:after {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 7px;
+  background-image: url(../img/shape.png);
+  right: 10px;
+  top: 7px;
+}
+#content .breadcrumbs ul li:last-child:after {
+  content: "";
+  width: 0;
+  height: 0;
+}
+#content .leftblock {
+  margin-top: 40px;
+  width: 20%;
+  max-width: 200px;
+  float: left;
+}
+#content .leftblock ul {
+  list-style: none;
+  padding-left: 0;
+}
+#content .leftblock ul li {
+  margin-bottom: 22px;
+}
+#content .leftblock ul li a {
+  color: #767676;
+  font-family: 'Arimo', sans-serif;
+  font-size: 16px;
+}
+#content .leftblock ul li a:hover {
+  color: #282c37;
+  text-decoration: none;
+}
+#content .leftblock ul li ul {
+  list-style: circle;
+  padding: 22px 0 0 22px;
+  display: none;
+}
+#content .leftblock ul li ul li {
+  margin-bottom: 5px;
+}
+#content .leftblock ul li ul li a {
+  font-size: 14px;
+  font-size: 0.875rem;
+}
+#content .leftblock ul li ul li a:hover {
+  text-decoration: underline;
+  color: #010101;
+}
+#content .leftblock ul li:hover ul {
+  display: block;
+}
+#content .leftblock .priceList {
+  margin-top: 80px;
+}
+#content .leftblock .priceList span {
+  padding-left: 10px;
+  font-weight: 700;
+  font-size: 16px;
+}
+#content .centerblock {
+  padding: 0;
+  margin-top: 20px;
+  width: 80%;
+  max-width: 780px;
+  float: left;
+}
+#content .centerblock:after {
+  content: "";
+  clear: both;
+}
+#content .centerblock article {
+  padding: 15px 15px 0 15px;
+  margin: 20px 0 0 23px;
+  width: 30.2%;
+  float: left;
+  border: 1px solid #e4e4e4;
+}
+#content .centerblock article img {
+  margin: 0 auto;
+}
+#content .centerblock article p {
+  padding-top: 10px;
+  text-align: center;
+  font-size: 16px;
+  font-size: 1rem;
+  color: #767676;
+  font-family: 'Arimo', sans-serif;
+  font-weight: 400;
+  line-height: 24px;
+  line-height: 1.5rem;
+}
+#content .centerblock article div {
+  width: 100%;
+  text-align: left;
+  border-top: 1px solid #e4e4e4;
+  position: relative;
+  padding: 10px 0 10px 15px;
+  font-family: 'Arimo', sans-serif;
+  font-size: 28px;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+#content .centerblock article div:after {
+  content: "";
+  position: absolute;
+  background-image: url(../img/mini.png);
+  background-size: cover;
+  width: 24px;
+  height: 21px;
+  top: 15px;
+  right: 10px;
+}
+#content .centerblock .myPagination {
+  width: 100%;
+  margin: 45px 0;
+  text-align: center;
+  list-style: none;
+}
+#content .centerblock .myPagination li {
+  display: inline-block;
+  margin-right: 20px;
+}
+#content .centerblock .myPagination li a {
+  color: #767676;
+  font-size: 18px;
+}
+#content .centerblock .bottomblock {
+  width: 96.5%;
+  height: 100px;
+  padding-top: 40px;
+  border-top: 1px solid #777777;
+  margin: 0 0 95px 23px;
+}
+#content .centerblock .bottomblock:after {
+  content: "";
+  clear: both;
+}
+#content .centerblock .bottomblock .leftCol {
+  padding: 0;
+  width: 48%;
+  margin-right: 4%;
+  float: left;
+}
+#content .centerblock .bottomblock .leftCol p {
+  font-style: 'Arimo', sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #767676;
+}
+#content .centerblock .bottomblock .rightCol {
+  padding: 0;
+  width: 48%;
+  float: left;
+}
+#content .centerblock .bottomblock .rightCol p {
+  font-style: 'Arimo', sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #767676;
+}
+/* Footer */
+footer {
+  width: 100%;
+  border-top: 1px solid #eaeaea;
+}
+footer .bottomMenu {
+  max-width: 980px;
+  width: 80%;
+  margin: 0 auto;
+  padding: 0 10px;
+  height: 120px;
+  padding-top: 50px;
+}
+footer .bottomMenu .rights {
+  width: 20%;
+  float: left;
+}
+footer .bottomMenu .rights p {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  color: #767676;
+}
+footer .bottomMenu ul {
+  padding: 0;
+  margin: 0;
+  text-align: right;
+}
+footer .bottomMenu ul li {
+  display: inline-block;
+  list-style: none;
+  margin-right: 50px;
+  font-size: 14px;
+  color: #4c5059 ;
+}
+footer .bottomMenu ul li a {
+  color: #4c5059;
+  text-decoration: none;
+  font-size: 14px;
+}
+footer .bottomMenu ul li a:hover {
+  text-decoration: underline;
+}
+footer .bottomMenu ul li:last-child {
+  margin-right: 0;
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  header .top .tel {
+    margin: 0 10% 0 10%;
+    font-size: 12px;
+  }
+  header .menu ul li {
+    margin: 0  10px;
+  }
+  header .menu ul li a {
+    font-size: 10px;
+  }
+  #content .breadcrumbs {
+    margin-left: 10%;
+  }
+  #content .breadcrumbs ul li a {
+    font-size: 12px;
+  }
+  #content .leftblock {
+    margin-left: 10%;
+    width: 30%;
+  }
+  #content .leftblock ul li {
+    margin-bottom: 5px;
+  }
+  #content .leftblock ul li a {
+    font-size: 12px;
+  }
+  #content .leftblock ul li ul {
+    padding-top: 0;
+  }
+  #content .leftblock ul li ul li a {
+    font-size: 10px;
+  }
+  #content .leftblock .priceList span {
+    font-size: 12px;
+  }
+  #content .centerblock {
+    width: 55%;
+  }
+  #content .centerblock article {
+    width: 30%;
+  }
+  #content .centerblock article p {
+    font-size: 10px;
+    line-height: 12px;
+  }
+  #content .centerblock article span {
+    font-size: 12px;
+  }
+  #content .centerblock article div:after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    width: 16px;
+    height: 13px;
+  }
+  #content .centerblock .myPagination ul {
+    padding-left: 0;
+  }
+  #content .centerblock .myPagination ul li a {
+    font-size: 12px;
+  }
+  footer .bottomMenu .rights p {
+    font-size: 10px;
+  }
+  footer .bottomMenu ul li {
+    margin-right: 10px;
+  }
+  footer .bottomMenu ul li a {
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 768px) and (min-width: 320px) {
+  .top .tel {
+    margin: 0 10% 0 10%;
+    font-size: 10px;
+  }
+  .top button {
+    font-size: 10px;
+  }
+  .menu ul {
+    height: 70px;
+  }
+  .menu ul li {
+    margin-right: 0;
+  }
+  .menu ul li a {
+    font-size: 10px;
+  }
+  .menu ul li a:after {
+    content: "";
+    margin-left: 5px;
+  }
+  #content .breadcrumbs {
+    margin-left: 10%;
+  }
+  #content .breadcrumbs ul li a {
+    font-size: 12px;
+  }
+  #content .leftblock {
+    margin-left: 10%;
+    width: 30%;
+  }
+  #content .leftblock ul li {
+    margin-bottom: 5px;
+  }
+  #content .leftblock ul li a {
+    font-size: 10px;
+  }
+  #content .leftblock ul li ul {
+    padding-top: 0;
+  }
+  #content .leftblock ul li ul li a {
+    font-size: 10px;
+  }
+  #content .leftblock .priceList {
+    margin-top: 25px;
+  }
+  #content .leftblock .priceList img {
+    width: 20px;
+    height: 20px;
+  }
+  #content .leftblock .priceList span {
+    font-size: 8px;
+  }
+  #content .centerblock {
+    width: 55%;
+  }
+  #content .centerblock article {
+    padding: 10px;
+    margin: 20px 8px 0 0;
+    width: 40%;
+    /* margin-left: 20%; */
+  }
+  #content .centerblock article p {
+    font-size: 8px;
+    line-height: 10px;
+  }
+  #content .centerblock article span {
+    font-size: 12px;
+  }
+  #content .centerblock article .btn {
+    padding: 0;
+    text-align: center;
+  }
+  #content .centerblock article div:after {
+    content: "";
+    width: 0;
+    height: 0;
+  }
+  #content .centerblock .myPagination ul {
+    padding-left: 0;
+  }
+  #content .centerblock .myPagination ul li a {
+    font-size: 10px;
+  }
+  #content .centerblock .bottomblock {
+    padding-top: 10px;
+  }
+  #content .centerblock .bottomblock .leftCol,
+  #content .centerblock .bottomblock .rightCol {
+    width: 100%;
+  }
+  #content .centerblock .bottomblock .leftCol p,
+  #content .centerblock .bottomblock .rightCol p {
+    font-size: 8px;
+    line-height: 12px;
+  }
+  footer .bottomMenu .rights p {
+    font-size: 10px;
+  }
+  footer .bottomMenu ul li {
+    margin-right: 0;
+  }
+  footer .bottomMenu ul li a {
+    font-size: 10px;
+  }
+}

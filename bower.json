@@ -1,0 +1,22 @@
+{
+  "name": "codeIT_TestTask",
+  "authors": [
+    "KorovkoYura <korovko.yura@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "normalize-css": "normalize.css#^4.2.0",
+    "jquery": "2.2.4"
+  }
+}
